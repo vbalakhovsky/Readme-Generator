@@ -72,13 +72,13 @@ validate: (value)=> {if(value){return true} else {return "please select your rep
 },
 
 {type: "input",
-message: "Please enter your emal",
+message: "Please enter your emal: ",
 name: "email",
 validate: (value)=> {if(value){return true} else {return "please enter your reply to continue"}}
 },
 
 {type: "input",
-message: "Please enter your GitHub username",
+message: "Please enter your GitHub username:",
 name: "git",
 validate: (value)=> {if(value){return true} else{ return "please enter your reply to continue"}}
 },
@@ -103,7 +103,8 @@ const template = `# ${title}
 
 ![License badge](https://img.shields.io/badge/license-${license}-brightgreen)
 
-## Project Description: ${description}
+## Project Description:
+${description}
 
 * [Description](#description)
 * [Installation](#installation)
@@ -128,7 +129,7 @@ ${tests}
 
 ## For Questions and Suggestions Please Contact ${authors} at:
 
-* GitHub: ${git}
+* GitHub: ${git} 
 * E-mail: ${email}`;
 createNewFile(title, template );
 
